@@ -17,7 +17,8 @@
     {% for position in space.shape_position_coords %}
     {% include "./geometry/coordinate/position.json" with context %},
     {% endfor %}
-    {% for pose in space.wall_pose_coords %}
+    {% for wall_pose in space.wall_pose_coords %}
+    {% set pose = wall_pose %}
     {% include "./geometry/coordinate/pose.json" with context %},
     {% endfor %}
 {% endblock %}
